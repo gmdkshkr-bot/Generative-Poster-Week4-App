@@ -100,7 +100,7 @@ def generate_3d_poster(
     
     for i in range(n_layers):
         cx, cy = random.random(), random.random()
-        rr = random.uniform(0.01,0.25)
+        rr = random.uniform(r_min, r_max)
         
         # Shadow
         x_s, y_s = shape(center=(cx+dx, cy+dy), r=rr, wobble=wobble, shape_type=shape_type)
@@ -143,6 +143,8 @@ shape_type = st.sidebar.selectbox("Shape Type", ['blob','circle','polygon'])
 n_sides = st.sidebar.slider("Polygon Sides", 3, 10, 6, 1)
 n_layers = st.sidebar.slider("Layers", 5, 60, 30)
 wobble = st.sidebar.slider("Blob Wobble", 0.0, 1.0, 0.4, 0.05)
+r_mix = st.sidebar.slider("Minimum Radius, 0,05, 0.25, 0.01)
+r_max = st.sidebar.slider("Maximum Radius, 0.05, 0.25, 0.01)
 background = st.sidebar.color_picker("Background", "#FFFFFF")
 title_color = st.sidebar.color_picker("adjust Text Color if contrast is too low", "#000000")
 seed = st.sidebar.slider("Seed", value=0, step=1)
