@@ -78,7 +78,7 @@ def rotate_coords(x, y, cx, cy, angle):
 
 # --- 3D Poster Generator ---
 def generate_3d_poster(
-    style="pastel", shape_type="blob", n_layers=30, wobble=0.4,
+    style="pastel", shape_type="blob", n_layers=30, wobble=0.03,
     background="#FFFFFF", title_color="#000000", seed=None,
     shadow_offset=0.02, brightness_strength=0.3,
     alpha_min=0.6, alpha_max=0.9, light_angle=45,
@@ -96,6 +96,8 @@ def generate_3d_poster(
     dx = shadow_offset * math.cos(math.radians(light_angle))
     dy = -shadow_offset * math.sin(math.radians(light_angle))
 
+    shape_type = shapetype
+    
     for i in range(n_layers):
         cx, cy = random.random(), random.random()
         rr = random.uniform(0.01,0.25)
