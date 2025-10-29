@@ -62,7 +62,7 @@ def shape(center=(0.5,0.5), r=0.2, points=1000, wobble=0.15, shape_type="blob"):
         y = center[1] + r*np.sin(angles)
         return x, y
     elif shape_type=="polygon":
-        n_sides = random.randint(3,8)
+        n_sides = n_sides
         angles = np.linspace(0,2*np.pi,n_sides,endpoint=False)
         x = center[0] + r*np.cos(angles)
         y = center[1] + r*np.sin(angles)
@@ -141,7 +141,7 @@ style = st.sidebar.selectbox("Style", ['pastel','neon','monochrome','earth','oce
 shape_type = st.sidebar.selectbox("Shape Type", ['blob','circle','polygon'])
 n_sides = st.sidebar.slider("Polygon Sides", 3, 10, 6, 1)
 n_layers = st.sidebar.slider("Layers", 5, 60, 30)
-wobble = st.sidebar.slider("Wobble", 0.0, 1.0, 0.4, 0.05)
+wobble = st.sidebar.slider("Blob Wobble", 0.0, 1.0, 0.4, 0.05)
 background = st.sidebar.color_picker("Background", "#FFFFFF")
 title_color = st.sidebar.color_picker("Text Color", "#000000")
 seed = st.sidebar.number_input("Seed", value=0, step=1)
