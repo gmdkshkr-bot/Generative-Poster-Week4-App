@@ -96,7 +96,6 @@ def generate_3d_poster(
     dx = shadow_offset * math.cos(math.radians(light_angle))
     dy = -shadow_offset * math.sin(math.radians(light_angle))
 
-    shape_type = shapetype
     
     for i in range(n_layers):
         cx, cy = random.random(), random.random()
