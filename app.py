@@ -100,7 +100,6 @@ def generate_3d_poster(
     for i in range(n_layers):
         cx, cy = random.random(), random.random()
         rr = random.uniform(0.01,0.25)
-        shape = shape_type
         
         # Shadow
         x_s, y_s = shape(center=(cx+dx, cy+dy), r=rr, wobble=wobble, shape_type=shape_type)
