@@ -62,6 +62,7 @@ def shape(center=(0.5,0.5), r=0.2, points=1000, wobble=0.15, shape_type="blob"):
         y = center[1] + r*np.sin(angles)
         return x, y
     elif shape_type=="polygon":
+        global n_sides
         n_sides = n_sides
         angles = np.linspace(0,2*np.pi,n_sides,endpoint=False)
         x = center[0] + r*np.cos(angles)
