@@ -139,6 +139,7 @@ st.title("🎨 Generative 3D Poster")
 
 style = st.sidebar.selectbox("Style", ['pastel','neon','monochrome','earth','ocean','sunset','cyberpunk'])
 shape_type = st.sidebar.selectbox("Shape Type", ['blob','circle','polygon'])
+n_sides = st.siderbar.slider("Polygon Sides", 3, 10, 6, 1)
 n_layers = st.sidebar.slider("Layers", 5, 60, 30)
 wobble = st.sidebar.slider("Wobble", 0.0, 1.0, 0.4, 0.05)
 background = st.sidebar.color_picker("Background", "#FFFFFF")
