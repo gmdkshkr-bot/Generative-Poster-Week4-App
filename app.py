@@ -125,11 +125,11 @@ def generate_3d_poster(
 
     # Text
     plt.text(0.01,0.95,"3D like Generative Poster",fontsize=26,weight="bold",
-             color=title_color,transform=ax.transAxes,alpha=0.9)
+             color=title_color,transform=ax.transAxes,alpha=1.0)
     plt.text(0.01,0.91,"Week 4 • Arts & Big Data",fontsize=14,
-             color=title_color,transform=ax.transAxes,alpha=0.8)
+             color=title_color,transform=ax.transAxes,alpha=1.0)
     plt.text(0.01,0.88,f"Style: {style.title()} / Shape: {shape_type.title()}",fontsize=13,
-             color=title_color,transform=ax.transAxes,alpha=0.7)
+             color=title_color,transform=ax.transAxes,alpha=1.0)
 
     plt.xlim(0,1)
     plt.ylim(0,1)
