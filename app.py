@@ -103,13 +103,13 @@ def generate_3d_poster(
         shape = shape_type
         
         # Shadow
-        x_s, y_s = shape(center=(cx+dx, cy+dy), r=rr, wobble=wobble, shape_type=shape)
+        x_s, y_s = shape(center=(cx+dx, cy+dy), r=rr, wobble=wobble, shape_type=shape_type)
         angle = random.uniform(-rotation_range, rotation_range)
         x_s, y_s = rotate_coords(x_s, y_s, cx+dx, cy+dy, angle)
         plt.fill(x_s, y_s, color=(0,0,0), alpha=0.45, edgecolor=(0,0,0,0))
 
         # Actual shape
-        x, y = shape(center=(cx,cy), r=rr, wobble=wobble, shape_type=shape)
+        x, y = shape(center=(cx,cy), r=rr, wobble=wobble, shape_type=shape_type)
         x, y = rotate_coords(x, y, cx, cy, angle)
         base_color = np.array(random.choice(palette))
         brightness_factor = 0.7 + brightness_strength*(i/n_layers)
